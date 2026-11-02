@@ -12,5 +12,8 @@ def has_duplicate(arr: list) -> bool:
 
     return False
 
-print(has_duplicate(nums))
-print(has_duplicate(nums1))
+def has_duplicate1(arr: list[int]) -> bool:
+    return len(arr) != len(set(arr))
+
+print(has_duplicate1(nums))
+print(has_duplicate1(nums1))
