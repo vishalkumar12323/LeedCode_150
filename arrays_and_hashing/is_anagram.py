@@ -19,5 +19,8 @@ def is_anagram(str1: str, str2: str) -> bool:
 
     return True
 
-print(is_anagram("listen", "silent"))
-print(is_anagram("hello", "jello"))
+def is_anagram1(str1: str, str2: str) -> bool:
+    return sorted(str1) == sorted(str2)
+
+print(is_anagram1("listen", "silent"))
+print(is_anagram1("hello", "jello"))
