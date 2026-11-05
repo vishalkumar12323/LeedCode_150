@@ -3,17 +3,15 @@
 nums = [1, 2, 3, 1]
 nums1 = [2, 4, 6, 9]
 
-def has_duplicate(arr: list) -> bool:
+def has_duplicate(nums: list[int]) -> bool:
     hash_map = set()
-    for num in arr:
-        if num in hash_map:
+    for n in nums:
+        if n in hash_map:
             return True
-        hash_map.add(num)
-
+        hash_map.add(n)
+    
     return False
+    
+print(has_duplicate(nums))
+print(has_duplicate(nums1))
 
-def has_duplicate1(arr: list[int]) -> bool:
-    return len(arr) != len(set(arr))
-
-print(has_duplicate1(nums))
-print(has_duplicate1(nums1))
